@@ -25,10 +25,22 @@ showUserNames = async () => {
         const wrapper = document.querySelector('.wrapper')
         const container = document.createElement('div')
         const name = document.createElement('span')
+        const email = document.createElement('div')
+        const photo = document.createElement('div')
 
         name.innerHTML = user.name.first + ' ' + user.name.last
+        email.innerHTML = 'Email: ' + user.email
 
+        photo.style.width = '70px'
+        photo.style.height = '70px'
+        photo.style.background = `url(${user.picture.medium})`
+        container.style.width = '300px'
+        container.style.border = '1px solid black'
+        container.style.marginBottom = '5px'
+
+        container.appendChild(photo)
         container.appendChild(name)
+        container.appendChild(email)
         wrapper.appendChild(container)
 
     })
