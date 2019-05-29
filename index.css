@@ -1,0 +1,14 @@
+.photo {
+    width: 70px;
+    height: 70px;
+}
+
+.container {
+    width: 450px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    display: flex
+}
+
+
+
