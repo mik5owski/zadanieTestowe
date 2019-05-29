@@ -16,6 +16,9 @@ logUsers = async () => {
     console.log(users)
 }
 
+capitalize = (word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+} 
 
 showUserNames = async () => {
     const users = await fetchUsers()
@@ -24,11 +27,11 @@ showUserNames = async () => {
 
         const wrapper = document.querySelector('.wrapper')
         const container = document.createElement('div')
+        const photo = document.createElement('div')
         const name = document.createElement('span')
         const email = document.createElement('div')
-        const photo = document.createElement('div')
 
-        name.innerHTML = user.name.first + ' ' + user.name.last
+        name.innerHTML = capitalize(user.name.first) + ' ' + capitalize(user.name.last)
         email.innerHTML = 'Email: ' + user.email
 
         photo.style.width = '70px'
